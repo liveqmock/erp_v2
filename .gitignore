@@ -1,0 +1,47 @@
+# web application files
+/code/web-app/WEB-INF
+
+# IDE support files
+/code/.classpath
+/code/.launch
+/code/.project
+/code/.settings
+/code/*.launch
+/code/*.tmproj
+/code/ivy*
+/code/eclipse
+/code/.idea
+/code/*.iml
+/code/*.iml
+/code/out
+/code/test
+*.pdb
+
+# default HSQL database files for production mode
+/code/prodDb.*
+
+# general HSQL database files
+*Db.properties
+*Db.script
+
+# logs
+/code/stacktrace.log
+/code/test/reports
+/code/logs
+
+# project release file
+/code/*.war
+
+# plugin release file
+/code/*.zip
+
+# older plugin install locations
+/code/plugins
+/code/web-app/plugins
+/code/web-app/WEB-INF/classes
+
+# "temporary" build files
+/code/target
+
+# other
+*.iws
