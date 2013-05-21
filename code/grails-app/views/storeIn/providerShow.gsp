@@ -130,13 +130,6 @@
 							${instance.remark}
 						</td>
 					</tr>
-					<tr>
-						<th>&nbsp;</th>
-						<td>
-							<input type="submit" value="提交" />
-							${instance.id}
-						</td>
-					</tr>
 					</tbody>
 				</table>
 			</div>
