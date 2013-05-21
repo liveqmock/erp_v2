@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>新建售后服务工单</title>
+        <!--[if lt IE 9]>
+        <script src="js/html5.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <meta name='robots' content='noindex,nofollow' />
+        <link rel='stylesheet' href='css/common.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/jqtransform.css'type='text/css' media='all' />
+        <script type='text/javascript' src='js/jquery-1.4.4.min.js'></script>
+        <script type='text/javascript' src='js/jquery.jqtransform.js'></script>
+        <script type='text/javascript' src='js/common.js'></script>
+    </head>
+    
+    <body itemscope itemtype="http://schema.org/WebPage">
+        <header class="header">
+            <h1 id="logo">
+                <a href="main.html" title="爱自然进销存管理系统" rel="home">爱自然进销存管理系统</a>
+            </h1>
+            <nav class="navigation" role="navigation">
+                <ul class="clearfix">
+                    <li>
+                        <a href="main.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="product-list.html">商品</a>
+                    </li>
+                    <li>
+                        <a href="trade-verify.html">订单</a>
+                    </li>
+                    <li class="current">
+                        <a href="after-sale-list.html">售后</a>
+                    </li>
+                    <li>
+                        <a href="supplier-list.html">采购</a>
+                    </li>
+                    <li>
+                        <a href="#">库存</a>
+                    </li>
+                    <li>
+                        <a href="#">财务</a>
+                    </li>
+                    <li>
+                        <a href="#">报表</a>
+                    </li>
+                    <li>
+                        <a href="#">会员</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="copyright clearfix">
+                <li>
+                    <a href="main.html">
+                        系统首页
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        使用帮助
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        关于我们
+                    </a>
+                </li>
+            </ul>
+            <p class="userinfo">
+                欢迎您, matthew
+                <a href="#">帐号管理</a>
+                <a href="http://erp.nzonly.com/wp-admin/profile.php">编辑</a>
+                <a href="javascript:;" class="message">2 条消息</a>
+            </p>
+            <div class="userPanel">
+                <div class="inner">
+                    <img alt='matthew' src='images/avatar.png' height='43' width='43' />
+                    <ul>
+                        <li class="setting">
+                            <a href="#">系统设置</a>
+                        </li>
+                        <li class="cancel">
+                            <a href="#">注销</a>
+                        </li>
+                        <li class="logout">
+                            <a href="#">退出</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="content" class="clearfix">
+            <div class="main" role="main">
+                <div class="inner">
+                    <div class="title">
+                        <a href="#">爱自然进销存管理系统</a>
+                        <span>&gt;</span>
+                        <a>售后服务</a>
+                        <span>&gt;</span>
+                        <a>售后工单列表</a>
+                    </div>
+                    <div class="wrapper">
+                        <h2 class="search">售后工单列表</h2>
+                        <div class="pannel">
+                            <form id="searchbox" class="jqtransform" action="#">
+                                <fieldset>
+                                    <legend>商品搜索</legend>
+                                    <p class="clearfix">
+                                        <select name="status" id="status">
+                                            <option value="0">选择状态</option>
+                                            <option value="doing">处理中</option>
+                                            <option value="done">已处理</option>
+                                        </select>
+                                        <label for="username">旺旺ID：</label>
+                                        <input type="text" name="username" id="username" value="" />
+                                        <input type="submit" class="button" value="搜索" />
+                                    </p>
+                                </fieldset>
+                            </form>
+                        </div>
+                        
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>创建时间</th>
+                                    <th>发货时间</th>
+                                    <th>旺旺ID</th>
+                                    <th>关联订单号</th>
+                                    <th>类型</th>
+                                    <th>已花费</th>
+                                    <th>状态</th>
+                                    <th>创建人</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><time>2013-05-02 22:21</time></td>
+                                    <td><time>2013-05-02 22:21</time></td>
+                                    <td>璇璇0112</td>
+                                    <td><a href="#">2434322112323213</a></td>
+                                    <td>仅退款</td>
+                                    <td>&yen;20.00</td>
+                                    <td>处理中</td>
+                                    <td>Matthew</td>
+                                    <td>查看</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class='wp-pagenavi'>
+                            <span class='pages'>共有<strong>8</strong>页数据，当前第<strong>1</strong>页</span>
+                            <span class='current'>1</span>
+                            <a href='#' class='page larger'>2</a>
+                            <a href='#' class='page larger'>3</a>
+                            <a href='#' class='page larger'>4</a>
+                            <a href='#' class='page larger'>5</a>
+                            <span class='extend'>...</span>
+                            <a href='#' class='nextpostslink'>下一页</a>
+                            <a href='#' class='last'>尾页</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <h2 class="favorites first">
+                    <span>售后服务</span>
+                </h2>
+                <ul>
+                    <li>
+                        <a href="product-list.html">新建售后工单</a>
+                    </li>
+                    <li class="current">
+                        <a href="category-list.html">售后工单列表</a>
+                    </li>
+                </ul>
+                <h2 class="rss">
+                    <a href="http://trade.taobao.com/trade/itemlist/list_sold_items.htm">已卖出的宝贝
+                    </a>
+                </h2>
+                <h2 class="copyright">
+                    <a href="javascript:;">版权声明</a>
+                </h2>
+            </aside>
+        </div>
+        <footer>
+            <p>
+                感谢您使用爱自然进销存管理系统。
+                <span>
+                    Copyright &copy; 2011-2013 Love Nature (NZ) Co., Ltd.
+                </span>
+            </p>
+        </footer>
+    </body>
+
+</html>

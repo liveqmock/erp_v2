@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>订单审核</title>
+        <!--[if lt IE 9]>
+        <script src="js/html5.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <meta name='robots' content='noindex,nofollow' />
+        <link rel='stylesheet' href='css/common.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+        <script type='text/javascript' src='js/jquery-1.4.4.min.js'></script>
+        <script type='text/javascript' src='js/common.js'></script>
+    </head>
+    
+    <body itemscope itemtype="http://schema.org/WebPage">
+        <header class="header">
+            <h1 id="logo">
+                <a href="main.html" title="爱自然进销存管理系统" rel="home">爱自然进销存管理系统</a>
+            </h1>
+            <nav class="navigation" role="navigation">
+                <ul class="clearfix">
+                    <li class="home">
+                        <a href="main.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="product-list.html">商品</a>
+                    </li>
+                    <li class="current">
+                        <a href="trade-verify.html">订单</a>
+                    </li>
+                    <li>
+                        <a href="#">售后</a>
+                    </li>
+                    <li>
+                        <a href="#">采购</a>
+                    </li>
+                    <li>
+                        <a href="#">库存</a>
+                    </li>
+                    <li>
+                        <a href="#">财务</a>
+                    </li>
+                    <li>
+                        <a href="#">报表</a>
+                    </li>
+                    <li>
+                        <a href="#">会员</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="copyright clearfix">
+                <li>
+                    <a href="http://erp.nzonly.com">
+                        系统首页
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        使用帮助
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        关于我们
+                    </a>
+                </li>
+            </ul>
+            <p class="userinfo">
+                欢迎您, matthew
+                <a href="#">帐号管理</a>
+                <a href="http://erp.nzonly.com/wp-admin/profile.php">编辑</a>
+                <a href="javascript:;" class="message">2 条消息</a>
+            </p>
+            <div class="userPanel">
+                <div class="inner">
+                    <img alt='matthew' src='images/avatar.png' height='43' width='43' />
+                    <ul>
+                        <li class="setting">
+                            <a href="#">系统设置</a>
+                        </li>
+                        <li class="cancel">
+                            <a href="#">注销</a>
+                        </li>
+                        <li class="logout">
+                            <a href="#">退出</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="content" class="clearfix">
+            <div class="main" role="main">
+                <div class="inner">
+                    <div class="title">
+                        <a href="#">爱自然进销存管理系统</a>
+                        <span>&gt;</span>
+                        <a>订单管理</a>
+                        <span>&gt;</span>
+                        <a>待审核订单列表</a>
+                    </div>
+                    <div class="wrapper">
+                        <h2 class="search">待审核订单列表</h2>
+                        <p class="toolbar">
+                            <a class="confirm" href="#">确认订单</a>
+                            <a class="add"  href="#" title="适用于线下交易的订单">新增订单</a>
+                            <a class="edit" href="trade-edit.html">编辑订单</a>
+                            <a href="#">合并订单</a>
+                            <a href="#">拆分订单</a>
+                        </p>
+                        <ul class="trades">
+                        	<li>
+                                <table class="trade">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="4">
+                                                <span><input type="checkbox" id="trade1" name="" /><label for="trade1">订单编号：214526264079987</label></span>
+                                                <span>付款时间：2013-04-29 20:34</span>
+                                                <span class="remark">
+                                                    <img src="http://a.tbcdn.cn/sys/common/icon/trade/op_memo_1.png" title="这里是一些卖家的备忘" alt="" />
+                                                    <!-- op_memo_1 替换 1 为对应的状态数字，可更换旗帜颜色 -->
+                                                </span>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="product">
+                                                <img src="http://img02.taobaocdn.com/bao/uploaded/i2/T1fG6dXXVfXXaSRdoU_013935.jpg_sum.jpg" width="48" height="48" alt="" />
+                                                <h3><a href="">新西兰代购 汤普森 Thompson's 月见草胶囊 300粒 15年10月</a></h3>
+                                                <span class="price">&yen;111.00</span>
+                                                <span class="num">3</span>
+                                            </td>
+                                            <td rowspan="2" class="customer">
+                                                <p>
+                                                    <a href="#">渔者天下628</a>
+                                                </p>
+                                                <p>
+                                                    <a target="_blank" href="http://amos.alicdn.com/msg.aw?v=2&uid=渔者天下628&site=cntaobao&s=1&charset=utf-8" ><img border="0" src="http://amos.alicdn.com/online.aw?v=2&uid=渔者天下628&site=cntaobao&s=1&charset=utf-8" alt="点击这里给买家发消息" /></a>
+                                                </p>
+                                            </td>
+                                            <td rowspan="2" class="fee">
+                                                <strong class="price_count">&yen;666.00</strong>
+                                                <div class="post-info">(含快递:10.00)</div>
+                                                <div class="xcard"><img src="http://a.tbcdn.cn/sys/common/icon/trade/xcard.png" width="16" height="11" title="信用卡手续费3元" alt="" /></div>
+                                            </td>
+                                            <td rowspan="2" class="tools">
+                                                <p class="tool"><a href="#" title="订单无需操作，直接进入配货流程">审核</a> | <a href="#" title="订单需要拆分成多个包裹发货">拆分</a> | <a href="trade-edit.html" title="订单有需要替换、增加或删除的商品">编辑</a></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product">
+                                                <img src="http://img02.taobaocdn.com/bao/uploaded/i2/T1fG6dXXVfXXaSRdoU_013935.jpg_sum.jpg" width="48" height="48" alt="" />
+                                                <h3><a href="#">新西兰代购 汤普森 Thompson's 月见草胶囊 300粒 15年10月</a></h3>
+                                                <span class="price">&yen;111.00</span>
+                                                <span class="num">3</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            
+                            <li>
+                                <table class="trade">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="4">
+                                                <span><input type="checkbox" id="trade1" name="" /><label for="trade1">订单编号：214526264079987</label></span>
+                                                <span>付款时间：2013-04-29 20:34</span> 
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="product">
+                                                <img src="http://img02.taobaocdn.com/bao/uploaded/i2/T1fG6dXXVfXXaSRdoU_013935.jpg_sum.jpg" width="48" height="48" alt="" />
+                                                <h3><a href="">新西兰代购 汤普森 Thompson's 月见草胶囊 300粒 15年10月</a></h3>
+                                                <span class="price">&yen;111.00</span>
+                                                <span class="num">3</span>
+                                            </td>
+                                            <td rowspan="5" class="customer">
+                                                <p>
+                                                    <a href="#">渔者天下628</a>
+                                                </p>
+                                                <p>
+                                                    <a target="_blank" href="http://amos.alicdn.com/msg.aw?v=2&uid=渔者天下628&site=cntaobao&s=1&charset=utf-8" ><img border="0" src="http://amos.alicdn.com/online.aw?v=2&uid=渔者天下628&site=cntaobao&s=1&charset=utf-8" alt="点击这里给买家发消息" /></a>
+                                                </p>
+                                            </td>
+                                            <td rowspan="5" class="fee">
+                                                <strong class="price_count">&yen;666.00</strong>
+                                                <div class="post-info">(含快递:10.00)</div>
+                                                <div class="xcard"><img src="http://a.tbcdn.cn/sys/common/icon/trade/xcard.png" width="16" height="11" title="信用卡手续费3元" alt="" /></div>
+                                            </td>
+                                            <td rowspan="5" class="tools">
+                                                <p class="tool"><a href="#" title="订单无需操作，直接进入配货流程">审核</a> | <a href="#" title="订单需要拆分成多个包裹发货">拆分</a> | <a href="trade-edit.html" title="订单有需要替换、增加或删除的商品">编辑</a></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product">
+                                                <img src="http://img02.taobaocdn.com/bao/uploaded/i2/T1fG6dXXVfXXaSRdoU_013935.jpg_sum.jpg" width="48" height="48" alt="" />
+                                                <h3><a href="#">新西兰代购 汤普森 Thompson's 月见草胶囊 300粒 15年10月</a></h3>
+                                                <span class="price">&yen;111.00</span>
+                                                <span class="num">3</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product">
+                                                <img src="http://img02.taobaocdn.com/bao/uploaded/i2/T1fG6dXXVfXXaSRdoU_013935.jpg_sum.jpg" width="48" height="48" alt="" />
+                                                <h3><a href="#">新西兰代购 汤普森 Thompson's 月见草胶囊 300粒 15年10月</a></h3>
+                                                <span class="price">&yen;111.00</span>
+                                                <span class="num">3</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product">
+                                                <img src="http://img02.taobaocdn.com/bao/uploaded/i2/T1fG6dXXVfXXaSRdoU_013935.jpg_sum.jpg" width="48" height="48" alt="" />
+                                                <h3><a href="#">新西兰代购 汤普森 Thompson's 月见草胶囊 300粒 15年10月</a></h3>
+                                                <span class="price">&yen;111.00</span>
+                                                <span class="num">3</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product">
+                                                <img src="http://img02.taobaocdn.com/bao/uploaded/i2/T1fG6dXXVfXXaSRdoU_013935.jpg_sum.jpg" width="48" height="48" alt="" />
+                                                <h3><a href="#">新西兰代购 汤普森 Thompson's 月见草胶囊 300粒 15年10月</a></h3>
+                                                <span class="price">&yen;111.00</span>
+                                                <span class="num">3</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            
+                            <li>
+                                <table class="trade">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="4">
+                                                <span><input type="checkbox" id="trade1" name="" /><label for="trade1">订单编号：214526264079987</label></span>
+                                                <span>付款时间：2013-04-29 20:34</span>
+                                                <span class="remark">
+                                                    <img src="http://a.tbcdn.cn/sys/common/icon/trade/op_memo_1.png" title="这里是一些卖家的备忘" alt="" />
+                                                    <!-- op_memo_1 替换 1 为对应的状态数字，可更换旗帜颜色 -->
+                                                </span>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="product">
+                                                <img src="http://img02.taobaocdn.com/bao/uploaded/i2/T1fG6dXXVfXXaSRdoU_013935.jpg_sum.jpg" width="48" height="48" alt="" />
+                                                <h3><a href="">新西兰代购 汤普森 Thompson's 月见草胶囊 300粒 15年10月</a></h3>
+                                                <span class="price">&yen;111.00</span>
+                                                <span class="num">3</span>
+                                            </td>
+                                            <td rowspan="2" class="customer">
+                                                <p>
+                                                    <a href="#">渔者天下628</a>
+                                                </p>
+                                                <p>
+                                                    <a target="_blank" href="http://amos.alicdn.com/msg.aw?v=2&uid=渔者天下628&site=cntaobao&s=1&charset=utf-8" ><img border="0" src="http://amos.alicdn.com/online.aw?v=2&uid=渔者天下628&site=cntaobao&s=1&charset=utf-8" alt="点击这里给买家发消息" /></a>
+                                                </p>
+                                            </td>
+                                            <td rowspan="2" class="fee">
+                                                <strong class="price_count">&yen;666.00</strong>
+                                                <div class="post-info">(含快递:10.00)</div>
+                                            </td>
+                                            <td rowspan="2" class="tools">
+                                                <p class="tool"><a href="#" title="订单无需操作，直接进入配货流程">审核</a> | <a href="#" title="订单需要拆分成多个包裹发货">拆分</a> | <a href="trade-edit.html" title="订单有需要替换、增加或删除的商品">编辑</a></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product">
+                                                <img src="http://img02.taobaocdn.com/bao/uploaded/i2/T1fG6dXXVfXXaSRdoU_013935.jpg_sum.jpg" width="48" height="48" alt="" />
+                                                <h3><a href="#">新西兰代购 汤普森 Thompson's 月见草胶囊 300粒 15年10月</a></h3>
+                                                <span class="price">&yen;111.00</span>
+                                                <span class="num">3</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+                        
+                        
+                        <div class='wp-pagenavi'>
+                            <span class='pages'>共有<strong>8</strong>页数据，当前第<strong>1</strong>页</span>
+                            <span class='current'>1</span>
+                            <a href='#' class='page larger'>2</a>
+                            <a href='#' class='page larger'>3</a>
+                            <a href='#' class='page larger'>4</a>
+                            <a href='#' class='page larger'>5</a>
+                            <span class='extend'>...</span>
+                            <a href='#' class='nextpostslink'>下一页</a>
+                            <a href='#' class='last'>尾页</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <h2 class="favorites first">
+                    <span>订单管理</span>
+                </h2>
+                <ul>
+                    <li>
+                        <a href="brand-list.html">新增订单</a>
+                    </li>
+                    <li class="current">
+                        <a href="trade-verify.html">订单审核</a>
+                    </li>
+                    <li>
+                        <a href="trade-invoice.html">打单配货</a>
+                    </li>
+                    <li>
+                        <a href="brand-list.html">确认发货</a>
+                    </li>
+                    <li>
+                        <a href="brand-list.html">历史订单</a>
+                    </li>
+                </ul>
+                <h2 class="rss">
+                    <a href="http://trade.taobao.com/trade/itemlist/list_sold_items.htm">已卖出的宝贝
+                    </a>
+                </h2>
+                <h2 class="copyright">
+                    <a href="javascript:;">版权声明</a>
+                </h2>
+            </aside>
+        </div>
+        <footer>
+            <p>
+                感谢您使用爱自然进销存管理系统
+                <span>
+                    Copyright &copy; 2011-2013 Love Nature (NZ) Co., Ltd.
+                </span>
+            </p>
+        </footer>
+    </body>
+
+</html>

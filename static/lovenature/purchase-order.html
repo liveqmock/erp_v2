@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>创建采购订单</title>
+        <!--[if lt IE 9]>
+        <script src="js/html5.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <meta name='robots' content='noindex,nofollow' />
+        <link rel='stylesheet' href='css/common.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/jqtransform.css'type='text/css' media='all' />
+        <script type='text/javascript' src='js/jquery-1.4.4.min.js'></script>
+        <script type='text/javascript' src='js/jquery.jqtransform.js'></script>
+        <script type='text/javascript' src='js/common.js'></script>
+    </head>
+    
+    <body itemscope itemtype="http://schema.org/WebPage">
+        <header class="header">
+            <h1 id="logo">
+                <a href="main.html" title="爱自然进销存管理系统" rel="home">爱自然进销存管理系统</a>
+            </h1>
+            <nav class="navigation" role="navigation">
+                <ul class="clearfix">
+                    <li>
+                        <a href="main.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="product-list.html">商品</a>
+                    </li>
+                    <li>
+                        <a href="trade-verify.html">订单</a>
+                    </li>
+                    <li>
+                        <a href="after-sale-list.html">售后</a>
+                    </li>
+                    <li class="current">
+                        <a href="purchase-list.html">采购</a>
+                    </li>
+                    <li>
+                        <a href="#">库存</a>
+                    </li>
+                    <li>
+                        <a href="#">财务</a>
+                    </li>
+                    <li>
+                        <a href="#">报表</a>
+                    </li>
+                    <li>
+                        <a href="#">会员</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="copyright clearfix">
+                <li>
+                    <a href="main.html">
+                        系统首页
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        使用帮助
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        关于我们
+                    </a>
+                </li>
+            </ul>
+            <p class="userinfo">
+                欢迎您, matthew
+                <a href="#">帐号管理</a>
+                <a href="http://erp.nzonly.com/wp-admin/profile.php">编辑</a>
+                <a href="javascript:;" class="message">2 条消息</a>
+            </p>
+            <div class="userPanel">
+                <div class="inner">
+                    <img alt='matthew' src='images/avatar.png' height='43' width='43' />
+                    <ul>
+                        <li class="setting">
+                            <a href="#">系统设置</a>
+                        </li>
+                        <li class="cancel">
+                            <a href="#">注销</a>
+                        </li>
+                        <li class="logout">
+                            <a href="#">退出</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="content" class="clearfix">
+            <div class="main" role="main">
+                <div class="inner">
+                    <div class="title">
+                        <a href="#">爱自然进销存管理系统</a>
+                        <span>&gt;</span>
+                        <a>采购管理</a>
+                        <span>&gt;</span>
+                        <a>创建采购订单</a>
+                    </div>
+                    <div class="wrapper">
+                        <h2 class="search">创建采购订单</h2>
+                        <div class="pannel">
+                            <form action="#" class="jqtransform" method="post">
+                                <table class="layout">
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <label for="supplier">供应商：</label>
+                                            </th>
+                                            <td>
+                                                <select name="supplier" id="supplier">
+                                                    <option value="0">选择供应商</option>
+                                                    <option value="1">Vitaco Health Limited</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <label for="logistic">物流公司：</label>
+                                            </th>
+                                            <td>
+                                                <select name="logistic" id="logistic">
+                                                    <option value="0">选择物流</option>
+                                                    <option value="1">NZ POST</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <label for="shipping_code">物流单号：</label>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="shipping_code" id="shipping_code" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <label for="shipping_fee">物流成本：</label>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="shipping_fee" id="shipping_fee" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <label for="other_fee">其它支出：</label>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="other_fee" id="other_fee" value="" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br />
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>操作</th>
+                                            <th>主图</th>
+                                            <th>商品编码</th>
+                                            <th>商品名称</th>
+                                            <th>进货价格</th>
+                                            <th>进货数量</th>
+                                            <th>进货总价</th>
+                                            <th>保质期</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="8"><p><a href="#" id="add-product">新增商品</a> 请核实订货数量、保质期等信息后提交<span class="count">采购总价值：<strong>&yen;5555</strong> (不含物流费用)</span></td>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="#">修改</a>
+                                                <span>|</span>
+                                                <a href="#">删除</a>
+                                            </td>
+                                            <td>
+                                                <img src="http://img01.taobaocdn.com/bao/uploaded/i1/T1LBiwXhXnXXaUh5gU_014846.jpg_24x24.jpg" alt="" />
+                                            </td>
+                                            <td>EY0123</td>
+                                            <td>Antipodes 面霜</td>
+                                            <td>&yen;200</td>
+                                            <td>50</td>
+                                            <td>&yen;10000</td>
+                                            <td>2015-09</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">修改</a>
+                                                <span>|</span>
+                                                <a href="#">删除</a>
+                                            </td>
+                                            <td>
+                                                <img src="http://img01.taobaocdn.com/bao/uploaded/i1/T1LBiwXhXnXXaUh5gU_014846.jpg_24x24.jpg" alt="" />
+                                            </td>
+                                            <td>EY0123</td>
+                                            <td>Antipodes 面霜</td>
+                                            <td>&yen;200</td>
+                                            <td>50</td>
+                                            <td>&yen;10000</td>
+                                            <td>2015-09</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">修改</a>
+                                                <span>|</span>
+                                                <a href="#">删除</a>
+                                            </td>
+                                            <td>
+                                                <img src="http://img01.taobaocdn.com/bao/uploaded/i1/T1LBiwXhXnXXaUh5gU_014846.jpg_24x24.jpg" alt="" />
+                                            </td>
+                                            <td>EY0123</td>
+                                            <td>Antipodes 面霜</td>
+                                            <td>&yen;200</td>
+                                            <td>50</td>
+                                            <td>&yen;10000</td>
+                                            <td>2015-09</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br />
+                                <input type="submit" name="" value="提交采购单" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <h2 class="favorites first">
+                    <span>售后服务</span>
+                </h2>
+                <ul>
+                    <li>
+                        <a href="supplier-add.html">创建供应商</a>
+                    </li>
+                    <li>
+                        <a href="supplier-list.html">供应商列表</a>
+                    </li>
+                    <li class="current">
+                        <a href="purchase-order.html">创建采购订单</a>
+                    </li>
+                </ul>
+                <h2 class="rss">
+                    <a href="http://trade.taobao.com/trade/itemlist/list_sold_items.htm">已卖出的宝贝
+                    </a>
+                </h2>
+                <h2 class="copyright">
+                    <a href="javascript:;">版权声明</a>
+                </h2>
+            </aside>
+        </div>
+        <footer>
+            <p>
+                感谢您使用爱自然进销存管理系统。
+                <span>
+                    Copyright &copy; 2011-2013 Love Nature (NZ) Co., Ltd.
+                </span>
+            </p>
+        </footer>
+    </body>
+
+</html>

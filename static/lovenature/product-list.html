@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>商品列表页面</title>
+        <!--[if lt IE 9]>
+        <script src="js/html5.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <meta name='robots' content='noindex,nofollow' />
+        <link rel='stylesheet' href='css/common.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/jqtransform.css' type='text/css' media='all' />
+        <script type='text/javascript' src='js/jquery-1.4.4.min.js'></script>
+        <script type='text/javascript' src='js/jquery.jqtransform.js'></script>
+        <script type='text/javascript' src='js/common.js'></script>
+    </head>
+    
+    <body itemscope itemtype="http://schema.org/WebPage">
+        <header class="header">
+            <h1 id="logo">
+                <a href="main.html" title="爱自然进销存管理系统" rel="home">爱自然进销存管理系统</a>
+            </h1>
+            <nav class="navigation" role="navigation">
+                <ul class="clearfix">
+                    <li class="">
+                        <a href="main.html">首页</a>
+                    </li>
+                    <li class="current">
+                        <a href="product-list.html">商品</a>
+                    </li>
+                    <li>
+                        <a href="trade-verify.html">订单</a>
+                    </li>
+                    <li>
+                        <a href="#">售后</a>
+                    </li>
+                    <li>
+                        <a href="#">采购</a>
+                    </li>
+                    <li>
+                        <a href="#">库存</a>
+                    </li>
+                    <li>
+                        <a href="#">财务</a>
+                    </li>
+                    <li>
+                        <a href="#">报表</a>
+                    </li>
+                    <li class="">
+                        <a href="#">会员</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="copyright clearfix">
+                <li>
+                    <a href="http://erp.nzonly.com">
+                        系统首页
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        使用帮助
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        关于我们
+                    </a>
+                </li>
+            </ul>
+            <p class="userinfo">
+                欢迎您, matthew
+                <a href="#">帐号管理</a>
+                <a href="http://erp.nzonly.com/wp-admin/profile.php">编辑</a>
+                <a href="javascript:;" class="message">2 条消息</a>
+            </p>
+            <div class="userPanel">
+                <div class="inner">
+                    <img alt='matthew' src='images/avatar.png' height='43' width='43' />
+                    <ul>
+                        <li class="setting">
+                            <a href="#">系统设置</a>
+                        </li>
+                        <li class="cancel">
+                            <a href="#">注销</a>
+                        </li>
+                        <li class="logout">
+                            <a href="#">退出</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="content" class="clearfix">
+            <div class="main" role="main">
+                <div class="inner">
+                    <div class="title">
+                        <a href="#">爱自然进销存管理系统</a>
+                        <span>&gt;</span>
+                        <a>商品管理</a>
+                        <span>&gt;</span>
+                        <a>商品列表</a>
+                    </div>
+                    <div class="wrapper">
+                        <h2 class="search">商品列表</h2>
+                        <div class="pannel">
+                            <form id="searchbox" class="jqtransform" action="#">
+                                <fieldset>
+                                    <legend>商品搜索</legend>
+                                    <p class="clearfix">
+                                        <select name="category" id="category">
+                                            <option value="0">请选择分类</option>
+                                        </select>
+                                        <select name="brand" id="brand">
+                                            <option value="0">请选择品牌</option>
+                                        </select>
+                                        <input type="text" name="s" id="keywords" class="textfield" value="" />
+                                        <input type="submit" class="button" value="搜索" />
+                                    </p>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>主图</th>
+                                    <th>商品编码</th>
+                                    <th>商品名称</th>
+                                    <th>淘宝售价</th>
+                                    <th>库存成本<span title="库存成本(南京|奥克兰)">?</span></th>
+                                    <th>库存数量<span title="库存数量(南京|在途|奥克兰)">?</span></th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="http://img01.taobaocdn.com/bao/uploaded/i1/T1LBiwXhXnXXaUh5gU_014846.jpg_24x24.jpg" alt="" />
+                                    </td>
+                                    <td>EY012</td>
+                                    <td><a href="#">Antipodes</a> / 有机青柠广藿香 洁面乳 200ml</td>
+                                    <td>&yen;200.00</td>
+                                    <td>&yen;180.00/&yen;150.00</td>
+                                    <td>30/40/20</td>
+                                    <td>
+                                        <a href="product-edit.html">修改</a>
+                                        <span>|</span>
+                                        <a href="#">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="http://img01.taobaocdn.com/bao/uploaded/i1/T1LBiwXhXnXXaUh5gU_014846.jpg_24x24.jpg" alt="" />
+                                    </td>
+                                    <td>EY012</td>
+                                    <td><a href="#">Antipodes</a> / 有机青柠广藿香 洁面乳 200ml</td>
+                                    <td>&yen;200.00</td>
+                                    <td>&yen;180.00/&yen;150.00</td>
+                                    <td>30/40/20</td>
+                                    <td>
+                                        <a href="product-edit.html">修改</a>
+                                        <span>|</span>
+                                        <a href="#">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="http://img01.taobaocdn.com/bao/uploaded/i1/T1LBiwXhXnXXaUh5gU_014846.jpg_24x24.jpg" alt="" />
+                                    </td>
+                                    <td>EY012</td>
+                                    <td><a href="#">Antipodes</a> / 有机青柠广藿香 洁面乳 200ml</td>
+                                    <td>&yen;200.00</td>
+                                    <td>&yen;180.00/&yen;150.00</td>
+                                    <td>30/40/20</td>
+                                    <td>
+                                        <a href="product-edit.html">修改</a>
+                                        <span>|</span>
+                                        <a href="#">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="http://img01.taobaocdn.com/bao/uploaded/i1/T1LBiwXhXnXXaUh5gU_014846.jpg_24x24.jpg" alt="" />
+                                    </td>
+                                    <td>EY012</td>
+                                    <td><a href="#">Antipodes</a> / 有机青柠广藿香 洁面乳 200ml</td>
+                                    <td>&yen;200.00</td>
+                                    <td>&yen;180.00/&yen;150.00</td>
+                                    <td>30/40/20</td>
+                                    <td>
+                                        <a href="product-edit.html">修改</a>
+                                        <span>|</span>
+                                        <a href="#">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="http://img01.taobaocdn.com/bao/uploaded/i1/T1LBiwXhXnXXaUh5gU_014846.jpg_24x24.jpg" alt="" />
+                                    </td>
+                                    <td>EY012</td>
+                                    <td><a href="#">Antipodes</a> / 有机青柠广藿香 洁面乳 200ml</td>
+                                    <td>&yen;200.00</td>
+                                    <td>&yen;180.00/&yen;150.00</td>
+                                    <td>30/40/20</td>
+                                    <td>
+                                        <a href="product-edit.html">修改</a>
+                                        <span>|</span>
+                                        <a href="#">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="http://img01.taobaocdn.com/bao/uploaded/i1/T1LBiwXhXnXXaUh5gU_014846.jpg_24x24.jpg" alt="" />
+                                    </td>
+                                    <td>EY012</td>
+                                    <td><a href="#">Antipodes</a> / 有机青柠广藿香 洁面乳 200ml</td>
+                                    <td>&yen;200.00</td>
+                                    <td>&yen;180.00/&yen;150.00</td>
+                                    <td>30/40/20</td>
+                                    <td>
+                                        <a href="product-edit.html">修改</a>
+                                        <span>|</span>
+                                        <a href="#">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="http://img01.taobaocdn.com/bao/uploaded/i1/T1LBiwXhXnXXaUh5gU_014846.jpg_24x24.jpg" alt="" />
+                                    </td>
+                                    <td>EY012</td>
+                                    <td><a href="#">Antipodes</a> / 有机青柠广藿香 洁面乳 200ml</td>
+                                    <td>&yen;200.00</td>
+                                    <td>&yen;180.00/&yen;150.00</td>
+                                    <td>30/40/20</td>
+                                    <td>
+                                        <a href="product-edit.html">修改</a>
+                                        <span>|</span>
+                                        <a href="#">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="http://img01.taobaocdn.com/bao/uploaded/i1/T1LBiwXhXnXXaUh5gU_014846.jpg_24x24.jpg" alt="" />
+                                    </td>
+                                    <td>EY012</td>
+                                    <td><a href="#">Antipodes</a> / 有机青柠广藿香 洁面乳 200ml</td>
+                                    <td>&yen;200.00</td>
+                                    <td>&yen;180.00/&yen;150.00</td>
+                                    <td>30/40/20</td>
+                                    <td>
+                                        <a href="product-edit.html">修改</a>
+                                        <span>|</span>
+                                        <a href="#">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="http://img01.taobaocdn.com/bao/uploaded/i1/T1LBiwXhXnXXaUh5gU_014846.jpg_24x24.jpg" alt="" />
+                                    </td>
+                                    <td>EY012</td>
+                                    <td><a href="#">Antipodes</a> / 有机青柠广藿香 洁面乳 200ml</td>
+                                    <td>&yen;200.00</td>
+                                    <td>&yen;180.00/&yen;150.00</td>
+                                    <td>30/40/20</td>
+                                    <td>
+                                        <a href="product-edit.html">修改</a>
+                                        <span>|</span>
+                                        <a href="#">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="http://img01.taobaocdn.com/bao/uploaded/i1/T1LBiwXhXnXXaUh5gU_014846.jpg_24x24.jpg" alt="" />
+                                    </td>
+                                    <td>EY012</td>
+                                    <td><a href="#">Antipodes</a> / 有机青柠广藿香 洁面乳 200ml</td>
+                                    <td>&yen;200.00</td>
+                                    <td>&yen;180.00/&yen;150.00</td>
+                                    <td>30/40/20</td>
+                                    <td>
+                                        <a href="product-edit.html">修改</a>
+                                        <span>|</span>
+                                        <a href="#">查看</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class='wp-pagenavi'>
+                            <span class='pages'>共有<strong>8</strong>页数据，当前第<strong>1</strong>页</span>
+                            <span class='current'>1</span>
+                            <a href='#' class='page larger'>2</a>
+                            <a href='#' class='page larger'>3</a>
+                            <a href='#' class='page larger'>4</a>
+                            <a href='#' class='page larger'>5</a>
+                            <span class='extend'>...</span>
+                            <a href='#' class='nextpostslink'>下一页</a>
+                            <a href='#' class='last'>尾页</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <h2 class="favorites first">
+                    <span>商品管理</span>
+                </h2>
+                <ul>
+                    <li>
+                        <a href="product-list.html">商品列表</a>
+                    </li>
+                    <li class="current">
+                        <a href="category-list.html">分类目录</a>
+                    </li>
+                    <li>
+                        <a href="brand-list.html">商品品牌</a>
+                    </li>
+                </ul>
+                <h2 class="rss">
+                    <a href="http://trade.taobao.com/trade/itemlist/list_sold_items.htm">已卖出的宝贝
+                    </a>
+                </h2>
+                <h2 class="copyright">
+                    <a href="javascript:;">版权声明</a>
+                </h2>
+            </aside>
+        </div>
+        <footer>
+            <p>
+                感谢您使用爱自然进销存管理系统
+                <span>
+                    Copyright &copy; 2011-2013 Love Nature (NZ) Co., Ltd.
+                </span>
+            </p>
+        </footer>
+    </body>
+
+</html>

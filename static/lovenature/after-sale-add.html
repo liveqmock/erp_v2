@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>新建售后服务工单</title>
+        <!--[if lt IE 9]>
+        <script src="js/html5.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <meta name='robots' content='noindex,nofollow' />
+        <link rel='stylesheet' href='css/common.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/jqtransform.css'type='text/css' media='all' />
+        <script type='text/javascript' src='js/jquery-1.4.4.min.js'></script>
+        <script type='text/javascript' src='js/jquery.jqtransform.js'></script>
+        <script type='text/javascript' src='js/common.js'></script>
+    </head>
+    
+    <body itemscope itemtype="http://schema.org/WebPage">
+        <header class="header">
+            <h1 id="logo">
+                <a href="main.html" title="爱自然进销存管理系统" rel="home">爱自然进销存管理系统</a>
+            </h1>
+            <nav class="navigation" role="navigation">
+                <ul class="clearfix">
+                    <li>
+                        <a href="main.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="product-list.html">商品</a>
+                    </li>
+                    <li>
+                        <a href="trade-verify.html">订单</a>
+                    </li>
+                    <li class="current">
+                        <a href="after-sale.html">售后</a>
+                    </li>
+                    <li>
+                        <a href="#">采购</a>
+                    </li>
+                    <li>
+                        <a href="#">库存</a>
+                    </li>
+                    <li>
+                        <a href="#">财务</a>
+                    </li>
+                    <li>
+                        <a href="#">报表</a>
+                    </li>
+                    <li>
+                        <a href="#">会员</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="copyright clearfix">
+                <li>
+                    <a href="main.html">
+                        系统首页
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        使用帮助
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        关于我们
+                    </a>
+                </li>
+            </ul>
+            <p class="userinfo">
+                欢迎您, matthew
+                <a href="#">帐号管理</a>
+                <a href="http://erp.nzonly.com/wp-admin/profile.php">编辑</a>
+                <a href="javascript:;" class="message">2 条消息</a>
+            </p>
+            <div class="userPanel">
+                <div class="inner">
+                    <img alt='matthew' src='images/avatar.png' height='43' width='43' />
+                    <ul>
+                        <li class="setting">
+                            <a href="#">系统设置</a>
+                        </li>
+                        <li class="cancel">
+                            <a href="#">注销</a>
+                        </li>
+                        <li class="logout">
+                            <a href="#">退出</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="content" class="clearfix">
+            <div class="main" role="main">
+                <div class="inner">
+                    <div class="title">
+                        <a href="#">爱自然进销存管理系统</a>
+                        <span>&gt;</span>
+                        <a>售后服务</a>
+                        <span>&gt;</span>
+                        <a>新建售后服务工单</a>
+                    </div>
+                    <div class="wrapper">
+                        <h2 class="search">新建售后工单</h2>
+                        <!-- 介个页面貌似不科学？  -->
+                        <div class="pannel">
+                            <form action="#" class="jqtransform" method="post">
+                                <table class="layout">
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <label for="title">售后类型：</label>
+                                            </th>
+                                            <td>
+                                                <label for=""><input type="radio" name="after-sale" />仅退款</label>
+                                                <label for=""><input type="radio" name="after-sale" />仅退货</label>
+                                                <label for=""><input type="radio" name="after-sale" />不退货，重新发货</label>
+                                                <label for=""><input type="radio" name="after-sale" />退货并重新发货</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <label for="id">关联订单：</label>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="id" id="id" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <label for="damages">赔偿金额：</label>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="damages" id="damages" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <label for="description">问题详情：</label>
+                                            </th>
+                                            <td>
+                                                <textarea name="description" cols="30" rows="10"></textarea>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th>
+                                                <label for="logistic">退货物流：</label>
+                                            </th>
+                                            <td>
+                                                <select name="logistic" id="logistic">
+                                                    <option value="0">选择物流</option>
+                                                    <option value="yuantong">圆通快递</option>
+                                                    <option value="shengtong">申通物流</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <label for="shipping_code">退货单号：</label>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="shipping_code" id="shipping_code" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <label for="fee">退货开支：</label>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="fee" id="fee" value="" />
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th>
+                                                <label for="logistic2">发货物流：</label>
+                                            </th>
+                                            <td>
+                                                <select name="logistic2" id="logistic2">
+                                                    <option value="0">选择物流</option>
+                                                    <option value="yuantong">圆通快递</option>
+                                                    <option value="shengtong">申通物流</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <label for="shipping_code2">发货单号：</label>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="shipping_code2" id="shipping_code2" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <label for="fee2">发货开支：</label>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="fee2" id="fee2" value="" />
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <td><input type="submit" value="提交" /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <h2 class="favorites first">
+                    <span>售后服务</span>
+                </h2>
+                <ul>
+                    <li class="current">
+                        <a href="product-list.html">新建售后工单</a>
+                    </li>
+                    <li>
+                        <a href="category-list.html">售后工单列表</a>
+                    </li>
+                </ul>
+                <h2 class="rss">
+                    <a href="http://trade.taobao.com/trade/itemlist/list_sold_items.htm">已卖出的宝贝
+                    </a>
+                </h2>
+                <h2 class="copyright">
+                    <a href="javascript:;">版权声明</a>
+                </h2>
+            </aside>
+        </div>
+        <footer>
+            <p>
+                感谢您使用爱自然进销存管理系统。
+                <span>
+                    Copyright &copy; 2011-2013 Love Nature (NZ) Co., Ltd.
+                </span>
+            </p>
+        </footer>
+    </body>
+
+</html>
