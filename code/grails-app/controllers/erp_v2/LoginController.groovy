@@ -5,8 +5,14 @@ class LoginController {
 	def sysLogService
 
 	def index = {
-		//
-		//def content = render (template: 'book', model: [a:'fff'])
+		if (session.user) {
+			if (params.next) {
+				redirect(uri: params.next)
+			} else {
+				redirect(controller: 'main')
+			}
+		}
+		[ip:request.getHeader('X-Real-IP')?:request.getRemoteAddr()]
 	}
 
 	def doLogin = {

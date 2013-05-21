@@ -1,17 +1,20 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <aside class="sidebar">
 	<h2 class="favorites first">
-		<span>常用链接</span>
+		<span>采购管理</span>
 	</h2>
 	<ul>
-		<li>
-			<a href="${createLink(controller: 'product', action: 'index')}">商品列表</a>
+		<li class="${actionName=='provider'?'current':''}">
+			<a href="${createLink(action: 'provider')}">供应商列表</a>
 		</li>
-		<li>
-			<a href="${createLink(controller: 'product', action: 'cats')}">分类目录</a>
+		<li class="${actionName=='providerCreate'?'current':''}">
+			<a href="${createLink(action: 'providerCreate')}">创建供应商</a>
 		</li>
-		<li>
-			<a href="${createLink(controller: 'product', action: 'brands')}">商品品牌</a>
+		<li class="${actionName=='storeInCreate'?'current':''}">
+			<a href="${createLink(action: 'storeInCreate')}">创建采购订单</a>
+		</li>
+		<li class="${actionName=='index'?'current':''}">
+			<a href="${createLink(action: 'index')}">采购列表</a>
 		</li>
 	</ul>
 
