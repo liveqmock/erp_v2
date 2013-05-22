@@ -29,5 +29,6 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.13'
 	    compile 'mysql:mysql-connector-java:5.1.20'
 	    compile 'org.apache.commons:commons-email:1.3.1'
+	    compile 'com.alibaba:fastjson:1.1.29'
     }
 }

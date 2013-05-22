@@ -1,10 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE HTML>
 <html lang="zh-CN">
-
 <head>
 	<meta charset="UTF-8">
-	<title>爱自然进销存管理系统登录</title>
+	<title>爱自然进销存管理系统淘宝用户绑定</title>
 	<!--[if lt IE 9]>
 	<script src="js/html5.js"></script>
 	<![endif]-->
@@ -26,21 +25,19 @@
 			<p class="copyright">Love Nature (NZ) Co., Ltd. All rights reserved.</p>
 		</section>
 		<section class="loginForm">
-			<form name="loginform" id="loginform" action="${createLink(action: 'doLogin')}" method="post">
+			<p>尚未绑定系统账号, 请输入用户名和密码, 绑定成功后, 可以通过淘宝账号快捷登录</p>
+			<form name="loginform" id="loginform" action="${createLink(action: 'bind')}" method="post">
 				<g:if test="${flash.message}"><span class="error">${flash.message}</span></g:if>
 				<p class="login-username">
-					<label for="user_login">用户名：</label>
-					<input type="text" name="loginName" id="user_login" class="input" value="" size="20" />
+					<label for="username">用户名：</label>
+					<input type="text" name="username" id="username" class="input" value="" size="20" />
 				</p>
 				<p class="login-password">
-					<label for="user_pass">密　码：</label>
-					<input type="password" name="password" id="user_pass" class="input" value="" size="20" />
-				</p>
-				<p class="login-taobao">
-					<a href="${taobaoLoginUri}">使用淘宝网账号登录</a>
+					<label for="password">密　码：</label>
+					<input type="password" name="password" id="password" class="input" value="" size="20" />
 				</p>
 				<p class="login-submit">
-					<input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="登　录" />
+					<input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="绑  定" />
 				</p>
 			</form>
 		</section>
