@@ -5,6 +5,7 @@ class ProfileController {
 	static layout = "default"
 
 	def index = {
+		[instance: User.get(session.user.id)]
 	}
 
 	def edit = {

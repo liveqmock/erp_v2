@@ -587,7 +587,7 @@ body{
     background: url(../images/modify.png) no-repeat;
 }
 
-/** ±à¼­¶©µ¥ */
+/** ï¿½à¼­ï¿½ï¿½ï¿½ï¿½ */
 #modify-trade form fieldset{
     margin: 0 0 20px;
 }
@@ -706,4 +706,10 @@ footer p span{
 
 footer p a{
     color: #333;
+}
+
+div.errors {
+	color: #800;
+	border: 1px dotted #800;
+	padding: 5px 15px;
 }

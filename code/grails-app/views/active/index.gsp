@@ -1,10 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE HTML>
 <html lang="zh-CN">
-
 <head>
 	<meta charset="UTF-8">
-	<title>爱自然进销存管理系统登录</title>
+	<title>爱自然进销存管理系统 - 重置密码</title>
 	<!--[if lt IE 9]>
 	<script src="js/html5.js"></script>
 	<![endif]-->
@@ -16,6 +15,11 @@
 	<script type='text/javascript' src='${resource(dir: 'js', file: 'jquery-1.4.4.min.js')}'></script>
 	<script type='text/javascript' src='${resource(dir: 'js', file: 'common.js')}'></script>
 	<script type='text/javascript' src='${resource(dir: 'js', file: 'jquery.uniform.min.js')}'></script>
+	<style type="text/css">
+	#loginform p label {
+		width: 80px;
+	}
+	</style>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
 <div class="wrapper">
@@ -26,22 +30,25 @@
 			<p class="copyright">Love Nature (NZ) Co., Ltd. All rights reserved.</p>
 		</section>
 		<section class="loginForm">
-			<form name="loginform" id="loginform" action="${createLink(action: 'doLogin')}" method="post">
+			<p>Hi, 请输入您的用户名和姓名, 重置密码</p>
+			<form name="loginform" id="loginform" action="${createLink(controller: 'active')}" method="post">
 				<g:if test="${flash.message}"><span class="error">${flash.message}</span></g:if>
 				<p class="login-username">
-					<label for="user_login">用户名：</label>
-					<input type="text" name="loginName" id="user_login" class="input" value="" size="20" />
+					<label for="username">用户名：</label>
+					<input type="text" name="username" id="username" class="input" value="" size="20" />
 				</p>
 				<p class="login-password">
-					<label for="user_pass">密　码：</label>
-					<input type="password" name="password" id="user_pass" class="input" value="" size="20" />
+					<label for="newpassword">新密码：</label>
+					<input type="password" name="newpassword" id="newpassword" class="input" value="" size="20" />
 				</p>
-				<p class="login-taobao">
-					<a href="${taobaoLoginUri}">使用淘宝网账号登录</a>
+				<p class="login-password">
+					<label for="newpassword2">重复新密码：</label>
+					<input type="password" name="newpassword2" id="newpassword2" class="input" value="" size="20" />
 				</p>
 				<p class="login-submit">
-					<input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="登　录" />
-					<g:hiddenField name="next" value="${params.next?:'/'}" />
+					<input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="提交重置" />
+					<g:hiddenField name="code" value="${params.code}" />
+					<g:hiddenField name="uid" value="${params.uid}" />
 				</p>
 			</form>
 		</section>

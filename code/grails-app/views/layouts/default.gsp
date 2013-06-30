@@ -11,15 +11,19 @@
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'common.css')}" type="text/css" media="all" />
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}" type="text/css" media="all" />
 	<g:layoutHead />
+	<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery-1.4.4.min.js')}"></script>
+	<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.uniform.min.js')}"></script>
+	<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.jqtransform.js')}"></script>
+	<script type="text/javascript" src="${resource(dir: 'js', file: 'common.js')}"></script>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
 <header class="header">
 	<h1 id="logo">
 		<a href="${createLink(controller: 'main')}" title="爱自然进销存管理系统" rel="home">爱自然进销存管理系统</a>
 	</h1>
-	<nav class="navigation${controllerName=='main'?' home':''}" role="navigation">
+	<nav class="navigation${controllerName in ['main', 'user', 'settings']?' home':''}" role="navigation">
 		<ul class="clearfix">
-			<li class="index${controllerName=='main'?' current':''}">
+			<li class="index${controllerName in ['main', 'user', 'settings']?' current':''}">
 				<a href="${createLink(controller: 'main')}">首页</a>
 			</li>
 			<li class="product${controllerName=='product'?' current':''}">
@@ -98,9 +102,5 @@
 		感谢您使用爱自然进销存管理系统<span>	Copyright &copy; 2011-<%=(new Date().format('yyyy'))%> Love Nature (NZ) Co., Ltd.</span>
 	</p>
 </footer>
-<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery-1.4.4.min.js')}"></script>
-<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.uniform.min.js')}"></script>
-<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.jqtransform.js')}"></script>
-<script type="text/javascript" src="${resource(dir: 'js', file: 'common.js')}"></script>
 </body>
 </html>

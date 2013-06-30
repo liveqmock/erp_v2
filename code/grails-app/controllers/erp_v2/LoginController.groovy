@@ -16,6 +16,9 @@ class LoginController {
 				redirect(controller: 'main')
 			}
 		}
+		if (params.next) {
+			session.next = params.next
+		}
 		def cfg = ConfigurationHolder.config.taobao
 		def taobaoLoginUri = createLink(uri: "https://oauth.taobao.com/authorize?client_id=${cfg.appkey}&response_type=code&redirect_uri=${cfg.returnUri}")
 		[ip:request.getHeader('X-Real-IP')?:request.getRemoteAddr(), taobaoLoginUri:taobaoLoginUri]
@@ -71,8 +74,10 @@ class LoginController {
 		user.save(failOnError: true)
 		sysLogService.addlog(session, '登录系统')
 		log.info "登录成功: ${user.loginName}"
-		if (params.next) {
-			redirect(uri: params.next)
+		def next = session.next
+		session.removeAttribute('next')
+		if (next) {
+			redirect(uri: next)
 		} else {
 			redirect(controller: 'main')
 		}
@@ -92,11 +97,11 @@ class LoginController {
 	private def updateTaobaoUserInfo(User user, info) {
 		def now = System.currentTimeMillis()
 		user.taobaoUserNick = info.taobao_user_nick ? URLDecoder.decode(info.taobao_user_nick, 'UTF-8') : null
-		user.w1ExpiresIn    = (info.w1_expires_in as Long) + now
-		user.w2ExpiresIn    = (info.w2_expires_in as Long) + now
-		user.r1ExpiresIn    = (info.r1_expires_in as Long) + now
-		user.r2ExpiresIn    = (info.r2_expires_in as Long) + now
-		user.reExpiresIn    = (info.re_expires_in as Long) + now
+		user.w1ExpiresIn    = (info.w1_expires_in as Long) * 1000 + now
+		user.w2ExpiresIn    = (info.w2_expires_in as Long) * 1000 + now
+		user.r1ExpiresIn    = (info.r1_expires_in as Long) * 1000 + now
+		user.r2ExpiresIn    = (info.r2_expires_in as Long) * 1000 + now
+		user.reExpiresIn    = (info.re_expires_in as Long) * 1000 + now
 		user.tokenType      = info.token_type
 		user.refreshToken   = info.refresh_token
 		user.accessToken    = info.access_token
@@ -165,9 +170,11 @@ class LoginController {
 		updateTaobaoUserInfo(user, result)
 		user.save(failOnError: true)
 		sysLogService.addlog(session, '从淘宝账号登录系统')
-		log.info "通过淘宝登录成功: ${user.loginName}, ${result.taobao_user_nick}"
-		if (params.next) {
-			redirect(uri: params.next)
+		log.info "通过淘宝登录成功: ${user.loginName}, ${user.taobaoUserNick}"
+		def next = session.next
+		session.removeAttribute('next')
+		if (next) {
+			redirect(uri: next)
 		} else {
 			redirect(controller: 'main')
 		}
@@ -230,9 +237,10 @@ class LoginController {
 			sysLogService.addlog(session, '绑定淘宝账号并登录系统')
 			log.info "绑定淘宝账号并登录系统成功: ${user.loginName}, ${result.taobao_user_nick}"
 			session.removeAttribute('taobaoLoginInfo')
-
-			if (params.next) {
-				redirect(uri: params.next)
+			def next = session.next
+			session.removeAttribute('next')
+			if (next) {
+				redirect(uri: next)
 			} else {
 				redirect(controller: 'main')
 			}

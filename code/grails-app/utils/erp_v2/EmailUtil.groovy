@@ -28,7 +28,8 @@ class EmailUtil {
 				email.setSmtpPort cfg.port as int
 				email.setAuthentication cfg.username, cfg.password
 				email.setSSLOnConnect Boolean.parseBoolean(cfg.ssl)
-				email.setFrom cfg.from
+				email.setFrom cfg.from, 'Love Nature ERP no-reply'
+				email.setCharset 'UTF-8'
 				email.setSubject title
 				email.setHtmlMsg content
 				if (to instanceof String) {

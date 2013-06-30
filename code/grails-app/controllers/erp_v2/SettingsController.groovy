@@ -2,5 +2,9 @@ package erp_v2
 
 class SettingsController {
 
-	def index = {}
+	static layout = "default"
+
+	def index = {
+
+	}
 }

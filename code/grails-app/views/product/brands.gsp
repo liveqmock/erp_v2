@@ -62,7 +62,7 @@
 									<td>
 										<a href="#">查看</a>
 										<span>|</span>
-										<a href="${createLink(action: 'brandsEdit', id: 1)}">编辑</a>
+										<a href="${createLink(action: 'brandsEdit', id: it.id)}">编辑</a>
 									</td>
 								</tr>
 								</g:each>

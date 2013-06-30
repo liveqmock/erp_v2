@@ -4,6 +4,8 @@ import org.codehaus.groovy.grails.commons.ConfigurationHolder
 
 class ProductController {
 
+	def sysLogService
+
 	static layout = "default"
 
 	def size = ConfigurationHolder.config.get('view.page.size', 10)
@@ -25,6 +27,7 @@ class ProductController {
 		cat.properties = params
 		cat.timeCreate = new Date()
 		cat.save(flush: true)
+		sysLogService.addlog(session, "添加分类${cat.name}")
 		redirect action: 'cats'
 	}
 
@@ -35,6 +38,7 @@ class ProductController {
 				cat.properties = params
 				cat.timeUpdate = new Date()
 				cat.save(flush: true)
+				sysLogService.addlog(session, "更新分类${cat.name}")
 			}
 			redirect action: 'cats'
 		} else {
@@ -55,6 +59,7 @@ class ProductController {
 		brand.properties = params
 		brand.timeCreate = new Date()
 		brand.save(flash: true)
+		sysLogService.addlog(session, "添加品牌${brand.name}")
 		redirect action: 'brands'
 	}
 
@@ -65,8 +70,9 @@ class ProductController {
 				brand.properties = params
 				brand.timeUpdate = new Date()
 				brand.save(flush: true)
+				sysLogService.addlog(session, "更新品牌${brand.name}")
 			}
-			redirect action: 'cats'
+			redirect action: 'brands'
 		} else {
 			[brand: brand]
 		}

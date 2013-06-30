@@ -32,12 +32,13 @@ class User {
 	Date taobaoBindTime
 	String taobaoBindIp
 
+	String resetActiveCode
+	Long resetActiveExpiresIn
+
 	static constraints = {
-		loginName(blank: false, nullable: false, maxSize: 32, minSize: 3)
+		loginName(blank: false, nullable: false, unique: true, maxSize: 32, minSize: 3)
 		name(blank: false, nullable: false, maxSize: 32, minSize: 3)
 		password(blank: false, nullable: false)
-		regIp(blank: false, nullable: false)
-		lastIp(blank: false, nullable: false)
 		timeCreate(nullable: false)
 		status(blank: false, nullable: false, inList: statusMap.keySet().toList())
 	}
